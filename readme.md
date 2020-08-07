@@ -23,12 +23,18 @@ BlueConfiguration.PublicKey = "<RSAKeyValue><Modulus>mvKmd7KI63G5/ORoX6wJ0wGi3eW
 
 Create a new user (assuming you've set the private key part)
 ```c#
-User.Create("John", "Doe", "john.doe@aol.com");
+var user = User.Create("John", "Doe", "john.doe@aol.com");
 ```
 
 Generate a license for this user
 ```c#
-Keygen.GenerateLicense(user);
+var license = Keygen.GenerateLicense(user);
+```
+
+Validate user license key
+```c#
+var isValidLicense = license.IsValidLicense();
+Console.WriteLine("Is valid license: {0}", isValidLicense ? "Yes" : "No");
 ```
 
 ## Contribute

@@ -9,6 +9,11 @@ namespace BlueLicense.Core
 {
     public static class Keygen
     {
+        /// <summary>
+        /// Generate a license for the particular user
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static License GenerateLicense(User user)
         {
             License license;
